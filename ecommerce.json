@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "d8a6f210-db0e-46ea-857f-2951a2a3f4b7",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetOrdersDetailByStore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_orders_details_by_store/?store_name=shopnix",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_orders_details_by_store",
+						""
+					],
+					"query": [
+						{
+							"key": "store_name",
+							"value": "shopnix"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductDetailsByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_product_details_by_category/?store_name=shopnix&category_name=Smart Phone",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_product_details_by_category",
+						""
+					],
+					"query": [
+						{
+							"key": "store_name",
+							"value": "shopnix"
+						},
+						{
+							"key": "category_name",
+							"value": "Smart Phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order POST API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"order_status\": \"Processing\",\n        \"order_date\": \"2021-09-10T20:21:52Z\",\n        \"required_date\": \"2021-09-10T20:21:58Z\",\n        \"shipped_date\": \"2021-09-10T20:22:00Z\",\n        \"customer_id\": 1,\n        \"store_id\": 2,\n        \"staff_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order PUT API",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_id\": 2,\n    \"order_status\": \"Processing\",\n    \"order_date\": \"2021-09-10T20:21:52Z\",\n    \"required_date\": \"2021-09-10T20:21:58Z\",\n    \"shipped_date\": \"2021-09-10T20:22:00Z\",\n    \"customer_id\": 1,\n    \"store_id\": 2,\n    \"staff_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Delete API",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
